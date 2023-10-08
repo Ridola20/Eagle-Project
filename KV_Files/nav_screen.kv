@@ -1,0 +1,120 @@
+#: import get_color_from_hex kivy.utils.get_color_from_hex
+
+<NavScreen>:
+    md_bg_color: get_color_from_hex("#D9D9D9")
+    MDBoxLayout:
+        orientation: "vertical"
+        padding: 25, -90, 0, 0
+
+        MDBoxLayout:
+            size_hint: .2, .2
+            pos_hint: {"x": .83, "y": 0}
+
+            MDIconButton:
+                icon: "close"
+                icon_size: 50
+                on_press: app.change_screen("dashboard")
+
+        MDBoxLayout:
+            size_hint_y: .99
+            orientation: "vertical"
+            spacing: 50
+            padding: 25, 10, 50, 300
+
+            MDBoxLayout:
+                spacing: 25
+                padding: -15, 0, 0, 0
+                orientation: "horizontal"
+                MDBoxLayout:
+                    padding: 0, -15, 0, 15
+                    size_hint_y: .02
+                    size_hint_x: .02
+                    MDIcon:
+                        icon: "account-outline"
+                        font_size: 30
+
+                MDTextButton:
+                    text: "My Profile"
+                    size_hint_x: .9
+                    font_size: dp("20")
+                    padding: 0
+
+                
+            MDBoxLayout:
+                padding: -15, 0, 0, 0
+                spacing: 30
+                MDIcon:
+                    icon: "images/result.png"
+                MDTextButton:
+                    text: "Check My Result"
+                    font_size: dp("20")
+                
+            MDBoxLayout:
+                padding: -15, 0, 0, 0
+                spacing: 30
+                MDIcon:
+                    icon: "images/notifications.png"
+                MDTextButton:
+                    text: "Notifications"
+                    font_size: dp("20")
+            
+            MDBoxLayout:
+                spacing: 25
+                padding: -15, 0, 0, 0
+                orientation: "horizontal"
+                MDBoxLayout:
+                    padding: 0, -15, 0, 15
+                    size_hint_y: .02
+                    size_hint_x: .02
+                    MDIcon:
+                        icon: "clock-outline"
+                        font_size: 30
+
+                MDTextButton:
+                    text: "Assignment Checklist"
+                    size_hint_x: .9
+                    font_size: dp("20")
+                    padding: 0
+
+            
+            MDBoxLayout:
+                spacing: 25
+                padding: -15, 0, 0, 0
+                orientation: "horizontal"
+                MDBoxLayout:
+                    padding: 0, -15, 0, 15
+                    size_hint_y: .02
+                    size_hint_x: .02
+                    MDIcon:
+                        icon: "calendar-outline"
+                        font_size: 30
+
+                MDTextButton:
+                    text: "Events Calendar"
+                    size_hint_x: .9
+                    font_size: dp("20")
+                    padding: 0
+
+
+
+
+
+        # Developers Info
+        MDBoxLayout:
+            spacing: 25
+            padding: -15, 0, 0, 10
+            orientation: "horizontal"
+            size_hint_y: .05
+            MDBoxLayout:
+                padding: 0, 0, 0, 5
+                size_hint_y: .02
+                size_hint_x: .02
+                MDIcon:
+                    icon: "language-python"
+                    font_size: 30
+
+            MDTextButton:
+                text: "About Developers"
+                size_hint_x: .9
+                font_size: dp("20")
+                padding: 0

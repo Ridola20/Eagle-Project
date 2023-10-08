@@ -1,0 +1,1 @@
+1,Akinwale Oriolowo,ec/st/ss/20/924, sss3b, 17,DataBase/students_passports/passport1.jpg, True | 2,Sanusi Ridwan,ec/st/ss/20/879, sss3b, 17,DataBase/students_passports/passport2.jpg, False | 3,Oriolowo Oreoluwa,ec/st/ss/20/915, sss3a, 19,DataBase/students_passports/passport3.jpg, True

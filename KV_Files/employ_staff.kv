@@ -1,0 +1,147 @@
+#: import get_color_from_hex kivy.utils.get_color_from_hex
+#:import Gradient kivy_gradient.Gradient
+
+<EmployStaff>:
+    MDBoxLayout:
+        orientation: "vertical"
+
+        MDBoxLayout:
+            size_hint: 1, .1
+            radius: 25
+            spacing: 0
+            MDIconButton:
+                icon: "arrow-left"
+                icon_size: 40
+                size_hint_y: 1
+                #on_release: app.change_screen("nav_screen")
+
+            MDBoxLayout:
+                size_hint_x: .3
+
+            MDIconButton:
+                icon: "../images/notif.png"
+                size_hint_y: 1
+                icon_size: 65
+            
+            MDIconButton:
+                icon: "view-dashboard"
+                size_hint_y: 1
+                icon_size: 40
+
+
+        MDBoxLayout:
+            orientation: "vertical"
+            size_hint_y: .1
+            MDLabel:
+                text: "Admin Panel"
+                bold: True
+                halign: "center"
+                font_size: 30
+            MDLabel:
+                text: "Logged in as ~ " + "Olatoke Stephen"
+                halign: "center"
+                font_size: 25
+
+        MDBoxLayout:
+            orientation: "vertical"
+            size_hint_y: 1
+            MDLabel:
+                text: "Want to employ a staff?"
+                size_hint_y: .1
+                padding: 30, 0, 0, 0
+
+
+            MDScrollView:
+                do_scroll_x: False
+                size_hint: (1,1)
+                bar_width: 0
+                MDBoxLayout:
+                    id: form
+                    spacing: 10
+                    orientation: "vertical"
+                    height: 900
+                    padding: 30, 0, 30, 30
+                    size_hint_y: None
+                    MDBoxLayout:
+                        spacing: 20
+                        MDTextField:
+                            hint_text: "First Name"
+                            mode: "rectangle"
+                        MDTextField:
+                            hint_text: "Middle Name"
+                            mode: "rectangle"
+                    MDBoxLayout:
+                        MDTextField:
+                            hint_text: "Last Name"
+                            mode: "rectangle"
+                        MDIconButton:
+                            icon: "file-image"
+                            # Check if file has been uploaded and change icon if so
+                            icon_size: "30dp"
+
+
+
+
+                    MDBoxLayout:
+                        spacing: 20
+                        MDTextField:
+                            hint_text: "Assigned Class"
+                            mode: "rectangle"
+                        MDTextField:
+                            hint_text: "Nationality"
+                            mode: "rectangle"
+
+                    MDBoxLayout:
+                        spacing: 20
+                        MDTextField:
+                            hint_text: "State Of Origin"
+                            mode: "rectangle"
+                        MDTextField:
+                            multiline: False
+                            mode: "rectangle"
+                            hint_text: "Staff Division"
+
+                    MDTextField:
+                        hint_text: "Phone Number"
+                        mode: "rectangle"
+
+
+
+                    MDTextField:
+                        multiline: False
+                        mode: "rectangle"
+                        hint_text: "Subject(s) To Lecture"
+                    MDLabel:
+                        text: "If more than one subject, each subject must end with a dot (.) eg. Mathematics. English. etc."
+                        font_size: "15dp"
+                        padding: 10, 0
+
+                    MDBoxLayout:
+                        spacing: 20
+                        MDTextField:
+                            hint_text: "Referee Name"
+                            mode: "rectangle"
+                        MDTextField:
+                            hint_text: "Referee Tel"
+                            mode: "rectangle"
+
+                    MDBoxLayout:
+                        spacing: 20
+                        MDTextField:
+                            hint_text: "Gender"
+                            mode: "rectangle"
+                        
+                    MDCard:
+                        md_bg_color: get_color_from_hex("#115599")
+                        theme_color: "Custom"
+                        elevation: 2
+                        on_touch_down: self.md_bg_color = get_color_from_hex("#446688")
+                        on_touch_up: self.md_bg_color = get_color_from_hex("#115599")
+
+                        MDLabel:
+                            text: "Employ"
+                            valign: "center"
+                            color: get_color_from_hex("#ffffff")
+                            halign: "center"
+                            font_size: 25
+                            bold: True

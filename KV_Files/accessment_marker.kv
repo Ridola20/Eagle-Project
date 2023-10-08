@@ -1,0 +1,80 @@
+#: import get_color_from_hex kivy.utils.get_color_from_hex
+
+<AccessmentMarker>:
+    MDScrollView:
+        do_scroll_x: False
+        do_scroll_y: True
+        size_hint: (1,1)
+
+        MDBoxLayout:
+            size_hint_y: None
+            orientation: "vertical"
+            #padding: 10
+            orientation: 'vertical'
+            height: 300
+            spacing: 10
+
+            MDCard:
+                orientation: "horizontal"
+                size_hint_y: .06
+                padding: 0
+                elevation: 1.5
+                radius: 0
+                pos_hint: {"x": 0, "y": .93}
+                MDBoxLayout:
+                    size_hint_x: 1
+                    size_hint_y: .34
+                    id: "one"
+                    MDIconButton:
+                        icon_size: 30
+                        icon: "arrow-left"
+                        # on_press: 
+
+                MDBoxLayout:
+                    size_hint_x: 1
+                    size_hint_y: .33
+                    padding: 35, 0, 0, 0
+                    id: "one"
+                    MDIconButton:
+                        icon: "sort-alphabetical-ascending"
+                        padding: 0
+                        icon_size: 30
+                        on_press: self.icon = "sort-numeric-ascending" if self.icon == "sort-alphabetical-ascending" else "sort-alphabetical-ascending"
+
+                MDBoxLayout:
+                    size_hint_x: 1
+                    padding: 85, 0, 0, 0
+                    size_hint_y: .33
+                    MDIconButton:
+                        icon_size: 30
+                        icon: "selection-multiple"
+                        pos_hint: {"x": 0, "y": 0}
+                        on_press: self.icon = "sticker-check" if self.icon == "selection-multiple" else "selection-multiple"
+
+                        on_press: onei.icon = "square" if self.icon == "selection-multiple" else "square-outline"
+                
+
+
+            OneLineIconListItem:
+                onei: onei
+                text: "Omoniyi Ibrahim Ayomide"
+
+                IconLeftWidget:
+                    id: onei
+                    icon: "square-outline"
+                    on_release: self.icon = "square" if self.icon == "square-outline" else "square-outline"
+
+            OneLineIconListItem:
+                onei: onei
+                text: "Sanusi Ridwan Olaoluwa"
+
+                IconLeftWidget:
+                    id: onei
+                    icon: "square-outline"
+                    on_release: self.icon = "square" if self.icon == "square-outline" else "square-outline"
+
+            MDFloatingActionButton:
+                icon: "arrow-right"
+                theme_icon_color: "Custom"
+                md_bg_color: get_color_from_hex("#000000")
+                pos_hint: {"x": .82, "y": 0}

@@ -1,0 +1,468 @@
+#: import get_color_from_hex kivy.utils.get_color_from_hex
+
+<MainScreen>:
+	md_bg_color: get_color_from_hex("#D9D9D9")
+
+	#nav: nav_l
+
+	MDBoxLayout:
+		MDScrollView:
+			do_scroll_x: False
+			do_scroll_y: True
+			size_hint: (1,1)
+
+			MDBoxLayout:
+				size_hint_y: None
+				orientation: "vertical"
+				#padding: 10
+				orientation: 'vertical'
+				height: 1400
+				md_bg_color: get_color_from_hex("#D9D9D9")
+				spacing: 10
+
+				MDBoxLayout:
+					padding: 10
+					orientation: "vertical"
+					size_hint_y: .55
+
+
+					MDBoxLayout:
+						size_hint: 1, .1
+						radius: 25
+						MDIconButton:
+							icon: "menu"
+							icon_size: 40
+							size_hint_y: 1
+							pos_hint_y: .5
+							on_release: app.change_screen("nav_screen")
+
+						MDBoxLayout:
+							size_hint_x: .4
+						
+						MDIconButton:
+							icon: "history"
+							size_hint_y: 1
+							icon_size: 40
+							pos_hint_y: .5
+
+					MDBoxLayout:
+						orientation: "vertical" 
+						padding: 30
+						size_hint_y: .2
+						MDLabel:
+							text: "Welcome back,"
+						MDLabel:
+							text: "Sanusi Ridwan"
+							bold: True
+							font_size: 50
+									
+					MDBoxLayout:
+						size_hint: 1, .45
+						raduis: 15
+						padding: 10
+						FitImage:
+							source: "images/front_2.jpg"
+							radius: 20
+							size_hint_x: 1
+						
+				MDBoxLayout:
+					orientation: "vertical"
+					padding: 25, 25, 5, 25
+					size_hint_y: .5
+					md_bg_color: get_color_from_hex("#ffffff")
+
+					MDLabel:
+						text: "Quick Access"
+						bold: True
+						font_size: 24
+						font_family: "Comic"
+						size_hint_y: .1
+
+
+					MDScrollView:
+						do_scroll_x: True
+						do_scroll_y: False
+						size_hint_y: .5
+						bar_width: 0
+
+						MDBoxLayout:
+							size_hint_x: None
+							size_hint_y: 1
+							width: 1000
+							spacing: 25
+							height: 100
+							orientation: "horizontal"
+
+							MDBoxLayout:
+								orientation: "vertical"
+								size_hint_y: .9
+								size_hint_x: .1
+								spacing: 15
+
+								MDCard:
+									md_bg_color: get_color_from_hex("#367588")
+									radius: 20
+									elevation: 2
+									size_hint_y: .9
+									padding: 0, -100, 0, 0
+
+
+									MDIconButton:
+										icon_size: 80
+										size_hint: .5, .5
+										pos_hint_x: .5
+										theme_icon_color: "Custom"
+        								icon_color: 1,1,1,1
+										icon: "microscope"
+										on_press: print("Clicked")
+										on_release: print("Clicked")
+								MDLabel:
+									text: "Science"
+									size_hint_y: .1
+									bold: True
+									padding: 10
+									halign: "center"
+									font_size: 16
+									valign: "center"
+
+							MDBoxLayout:
+								orientation: "vertical"
+								size_hint_y: .9
+								size_hint_x: .1
+								spacing: 15
+
+								MDCard:
+									md_bg_color: get_color_from_hex("#ADF802")
+									radius: 20
+									elevation: 2
+									size_hint_y: .9
+									padding: 0, -100, 0, 0
+
+
+									MDIconButton:
+										icon_size: 80
+										size_hint: .5, .5
+										pos_hint_x: .5
+										icon: "images/result.png"
+										on_press: print("Clicked")
+										on_release: print("Clicked")
+								MDLabel:
+									text: "Results"
+									size_hint_y: .1
+									bold: True
+									padding: 10
+									halign: "center"
+									font_size: 16
+									valign: "center"
+
+							MDBoxLayout:
+								orientation: "vertical"
+								size_hint_y: .9
+								size_hint_x: .1
+								spacing: 15
+
+								MDCard:
+									md_bg_color: get_color_from_hex("#35703A")
+									radius: 20
+									elevation: 2
+									size_hint_y: .9
+									padding: 0, -100, 0, 0
+
+
+									MDIconButton:
+										icon_size: 80
+										size_hint: .5, .5
+										pos_hint_x: .5
+										theme_icon_color: "Custom"
+        								icon_color: 1,1,5,1
+										icon: "images/ebook1.png"
+										on_press: print("Clicked")
+										on_release: print("Clicked")
+								MDLabel:
+									text: "Ebooks"
+									size_hint_y: .1
+									bold: True
+									padding: 10
+									halign: "center"
+									font_size: 16
+									valign: "center"
+						
+							MDBoxLayout:
+								orientation: "vertical"
+								size_hint_y: .9
+								size_hint_x: .1
+								spacing: 15
+
+								MDCard:
+									md_bg_color: get_color_from_hex("#104080")
+									radius: 20
+									elevation: 2
+									size_hint_y: .9
+									padding: 0, -100, 0, 0
+
+
+									MDIconButton:
+										icon_size: 80
+										size_hint: .5, .5
+										pos_hint_x: .5
+										icon: "images/game.png"
+										on_press: print("Clicked")
+										on_release: print("Clicked")
+								MDLabel:
+									text: "IQ Test"
+									size_hint_y: .1
+									bold: True
+									padding: 10
+									halign: "center"
+									font_size: 16
+									valign: "center"
+							
+							MDBoxLayout:
+								orientation: "vertical"
+								size_hint_y: .9
+								size_hint_x: .1
+								spacing: 15
+
+								MDCard:
+									md_bg_color: get_color_from_hex("#ADF802")
+									radius: 20
+									elevation: 2
+									size_hint_y: .9
+									padding: 0, -100, 0, 0
+
+
+									MDIconButton:
+										icon_size: 80
+										size_hint: .5, .5
+										pos_hint_x: .5
+										icon: "images/notifications.png"
+										on_press: print("Clicked")
+										on_release: print("Clicked")
+								MDLabel:
+									text: "Notifications"
+									size_hint_y: .1
+									bold: True
+									padding: 10
+									halign: "center"
+									font_size: 16
+									valign: "center"
+
+
+					#< --------- --------- -------- -------- -------- -------- ------- >
+							MDBoxLayout:
+								orientation: "vertical"
+								size_hint_y: .9
+								size_hint_x: .1
+								spacing: 15
+
+								MDCard:
+									md_bg_color: get_color_from_hex("#ADF802")
+									radius: 20
+									elevation: 2
+									size_hint_y: .9
+									padding: 0, -100, 0, 0
+
+
+									MDIconButton:
+										icon_size: 80
+										size_hint: .5, .5
+										pos_hint_x: .5
+										icon: "microscope"
+										on_press: print("Clicked")
+										on_release: print("Clicked")
+								MDLabel:
+									text: "Science"
+									size_hint_y: .1
+									bold: True
+									padding: 10
+									halign: "center"
+									font_size: 16
+									valign: "center"
+
+							MDBoxLayout:
+								orientation: "vertical"
+								size_hint_y: .9
+								size_hint_x: .1
+								spacing: 15
+
+								MDCard:
+									md_bg_color: get_color_from_hex("#ADF802")
+									radius: 20
+									elevation: 2
+									size_hint_y: .9
+									padding: 0, -100, 0, 0
+
+
+									MDIconButton:
+										icon_size: 80
+										size_hint: .5, .5
+										pos_hint_x: .5
+										icon: "images/result.png"
+										on_press: print("Clicked")
+										on_release: print("Clicked")
+								MDLabel:
+									text: "Science"
+									size_hint_y: .1
+									bold: True
+									padding: 10
+									halign: "center"
+									font_size: 16
+									valign: "center"
+
+					MDLabel:
+						text: "E - Courses"
+						bold: True
+						font_size: 24
+						font_family: "Comic"
+						size_hint_y: .1
+						padding: 0, 40, 0, 15
+
+					MDScrollView:
+						do_scroll_x: True
+						do_scroll_y: False
+						size_hint_y: .8
+						bar_width: 0
+
+						MDBoxLayout:
+							size_hint_x: None
+							size_hint_y: 1
+							width: 1000
+							spacing: 55
+							height: 100
+							orientation: "horizontal"
+
+							MDBoxLayout:
+								radius: 20
+								orientation: "vertical"
+								size_hint_x: 1
+								spacing: 5
+								padding: 0, 30, 0, 10
+								FitImage:
+									source: 'images/front_2.jpg'
+									radius: 20
+									on_touch_down: print("Image Clicked")
+								MDBoxLayout:
+									orientation: "vertical"
+									spacing: 1
+									size_hint_y: .55
+									MDTextButton:
+										text: 'Everything you need to know about acidic warning'
+										bold: True
+										size_hint_x: 1
+										font_size: 16
+										on_press: print("Navigate to screen")
+									MDLabel:
+										text: 'by: ' + "Adeosun Enoch"
+										font_size: 16
+										bold: True
+										opacity: .7
+
+							MDBoxLayout:
+								radius: 20
+								orientation: "vertical"
+								size_hint_x: 1
+								spacing: 5
+								padding: 0, 30, 0, 10
+								FitImage:
+									source: 'images/front_1.jpg'
+									radius: 20
+									on_touch_down: print("Image Clicked")
+								MDBoxLayout:
+									orientation: "vertical"
+									spacing: 1
+									size_hint_y: .55
+									MDTextButton:
+										text: 'Insights of advanced AI technologies and how to use them'
+										bold: True
+										size_hint_x: 1
+										font_size: 16
+										on_press: print("Navigate to screen")
+									MDLabel:
+										text: 'by: ' + "Ridwan Sanusi"
+										font_size: 16
+										bold: True
+										opacity: .7
+							MDBoxLayout:
+								radius: 20
+								orientation: "vertical"
+								size_hint_x: 1
+								spacing: 5
+								padding: 0, 30, 0, 10
+								FitImage:
+									source: 'images/front_2.jpg'
+									radius: 20
+									on_touch_down: print("Image Clicked")
+								MDBoxLayout:
+									orientation: "vertical"
+									spacing: 1
+									size_hint_y: .55
+									MDTextButton:
+										text: 'The realistic impact of education and it\'s importance'
+										bold: True
+										size_hint_x: 1
+										font_size: 16
+										on_press: print("Navigate to screen")
+									MDLabel:
+										text: 'by: ' + "Stephen Olatoke"
+										font_size: 16
+										bold: True
+										opacity: .7
+
+
+							MDBoxLayout:
+								radius: 20
+								orientation: "vertical"
+								size_hint_x: 1
+								spacing: 5
+								padding: 0, 30, 0, 10
+								FitImage:
+									source: 'images/front_2.jpg'
+									radius: 20
+									on_touch_down: print("Image Clicked")
+								MDBoxLayout:
+									orientation: "vertical"
+									spacing: 1
+									size_hint_y: .55
+									MDTextButton:
+										text: 'Everything you need to know about acidic warning'
+										bold: True
+										size_hint_x: 1
+										font_size: 16
+										on_press: print("Navigate to screen")
+									MDLabel:
+										text: 'by ' + "Full Name"
+										font_size: 16
+										bold: True
+										opacity: .7
+							MDBoxLayout:
+								radius: 20
+								orientation: "vertical"
+								size_hint_x: 1
+								spacing: 5
+								padding: 0, 30, 0, 10
+								FitImage:
+									source: 'images/front_2.jpg'
+									radius: 20
+									on_touch_down: print("Image Clicked")
+								MDBoxLayout:
+									orientation: "vertical"
+									spacing: 1
+									size_hint_y: .55
+									MDTextButton:
+										text: 'Everything you need to know about acidic warning'
+										bold: True
+										size_hint_x: 1
+										font_size: 16
+										on_press: print("Navigate to screen")
+									MDLabel:
+										text: 'by ' + "Full Name"
+										font_size: 16
+										bold: True
+										opacity: .7
+
+				MDBoxLayout:
+					size_hint_y: .2
+					padding: 0
+					size_hint_x: 1
+					
+

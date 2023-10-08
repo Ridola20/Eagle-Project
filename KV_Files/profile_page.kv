@@ -1,0 +1,165 @@
+#: import get_color_from_hex kivy.utils.get_color_from_hex
+#:import Gradient kivy_gradient.Gradient
+
+<ProfilePage>:
+    canvas:
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            texture: 
+                Gradient.vertical(
+                get_color_from_hex("17517e"),
+                get_color_from_hex("17517e"),
+                get_color_from_hex("115599"),
+                get_color_from_hex("ADD8E6")
+                
+                )
+    MDBoxLayout:
+        orientation: "vertical"
+        size_hint_y: .8
+        pos_hint: {"x": 0, "y": .5}
+
+        MDBoxLayout:
+            id: top
+            MDIconButton:
+                icon_size: 40
+                icon: "arrow-left"
+
+            MDBoxLayout:
+                size_hint_x: 1
+                size_hint_y: .1
+
+            MDIconButton:
+                icon: "account-edit-outline"
+                icon_size: 40
+
+        MDBoxLayout:
+            size_hint_y: .8
+            orientation: "vertical"
+            MDBoxLayout:
+                size_hint_y: 1
+                padding: 85, 0, 85, 0
+                FitImage:
+                    source: "../images/passport.jpg"
+                    radius: 300
+        MDLabel:
+            size_hint_y: .3
+            text: "Sanusi Ridwan Olaoluwa"
+            halign: "center"
+            bold: True
+            font_size: 30
+            color: get_color_from_hex("#ffffff")
+            outline_color: get_color_from_hex("#000000")
+        MDLabel:
+            text: "Status: " + "Head Of Tech"
+            size_hint_y: .02
+            halign: "center"
+            padding: 0, 0, 0, 50
+            color: get_color_from_hex("#f2f2f2")
+
+
+
+    MDBoxLayout:
+        id: random_details
+        md_bg_color: get_color_from_hex("ffffff")
+        size_hint_y: .5
+        radius: 50, 50, 0, 0
+        line_color: get_color_from_hex("888888")
+
+        MDScrollView:
+            do_scroll_y: True
+            do_scroll_x: False
+            size_hint: (1,1)
+
+            MDBoxLayout:
+                size_hint_y: None
+                size_hint_x: 1
+                height: 600
+                orientation: "vertical"
+                MDBoxLayout:
+                    size_hint_x: 1
+                    padding: 40
+                    MDLabel:
+                        text: "Gender: "
+                        bold: True
+                        size_hint_x: 1
+                    MDLabel:
+                        text: "Male"
+
+                MDBoxLayout:
+                    size_hint_x: 1
+                    padding: 40
+                    MDLabel:
+                        text: "Class: "
+                        bold: True
+                        size_hint_x: 1
+                    MDLabel:
+                        text: "SS 3B"
+
+                MDBoxLayout:
+                    size_hint_x: 1
+                    padding: 40
+                    MDLabel:
+                        text: "Admission Number: "
+                        bold: True
+                        size_hint_x: 1
+                    MDLabel:
+                        text: "EC/ST/20/SS/"
+                        size_hint_x: .7
+                    MDLabel:
+                        text: "924"
+                        bold: True
+                        font_size: 22
+                        size_hint_x: .25
+
+                MDBoxLayout:
+                    size_hint_x: 1
+                    padding: 40
+                    MDLabel:
+                        text: "Date Of Birth: "
+                        bold: True
+                        size_hint_x: 1
+                    MDLabel:
+                        text: "17/08/2006"
+
+                MDBoxLayout:
+                    size_hint_x: 1
+                    padding: 40
+                    orientation: "vertical"
+                    MDLabel:
+                        text: "Activity Tracker"
+                        bold: True
+
+                MDBoxLayout:
+                    val: val
+                    size_hint_x: 1
+                    radius: 50
+                    padding: 50
+                    padding: 40, -15, 50, 55
+                    spacing: 10
+                    orientation: "vertical"
+                    MDProgressBar:
+                        id: val
+                        value: 70
+                        theme_color: "Custom"
+                        color: get_color_from_hex("#000000")
+                    MDLabel:
+                        text: str(val.value) + "%"
+                        pos_hint: {"x": .9, "y": 0}
+
+
+                MDBoxLayout:
+                    orientation: "vertical"
+                    size_hint: (.5,.8)
+                    md_bg_color: get_color_from_hex("115599")
+                    radius: 10
+                    pos_hint: {"x": .25, "y": 0}
+                    MDIconButton:
+                        icon: "speaker-wireless"
+                        theme_icon_color: "Custom"
+                        icon_color: get_color_from_hex("ffffff")
+                        pos_hint: {"x": .35,"y": .0}
+                        icon_size: "35dp"
+
+                MDBoxLayout:
+                    size_hint: (1,.3)
